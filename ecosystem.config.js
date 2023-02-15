@@ -12,7 +12,7 @@ module.exports = {
     production: {
       user: 'root',
       host: ['176.31.217.188'],
-      ref: 'origin/main',
+      ref: 'origin/master',
       repo: 'git@github.com:Snox-dev1/Divertimento-front.git',
       path: '/home/divertimento-front',
       'pre-deploy-local': '',
