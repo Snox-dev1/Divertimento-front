@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Texte from './Texte';
 
@@ -77,8 +78,10 @@ const Slider = () => {
 
       <div
         className={`
-            ${slider <= 0 ? '' : 'translate-x-0'} transition-all duration-500 absolute inset-0 w-full h-full
-            bg-black        `}
+            ${
+              slider <= 0 ? '-translate-x-full opacity-0' : 'translate-x-0'
+            } transition-all duration-500 absolute inset-0 w-full h-full
+                  `}
       >
         <div className="top-10 right-10 absolute text-lg">
           Réserves au{' '}
@@ -89,9 +92,9 @@ const Slider = () => {
           </span>
         </div>
         <div className="bottom-10 right-10 absolute text-2xl">
-          <a href="" className="text-white font-bold">
-            Accédes directement à la boutique
-          </a>
+          <Link href="/Index">
+            <div className="text-white font-bold">Accédes directement à la boutique</div>
+          </Link>
         </div>
       </div>
     </div>

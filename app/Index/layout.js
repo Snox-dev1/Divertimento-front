@@ -1,7 +1,7 @@
 'use client';
-import '../styles/globals.css';
+import '../../styles/globals.css';
 import { useState, useEffect } from 'react';
-import Seo from '../components/Seo';
+import Seo from '../../components/Seo';
 export default function RootLayout({ children }) {
   // check if the page is full loaded and the font is loaded
   const [Loaded, setLoaded] = useState(false);

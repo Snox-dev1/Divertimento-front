@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
@@ -21,8 +20,12 @@ export default function Seo(props) {
   meta['title'] = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title;
 
   return (
-    <Head>
+    <head>
       <title>{meta.title}</title>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=5 "
+      />
       <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
       {/* <meta property="og:url" content={`${meta.url}${router.asPath}`} /> */}
@@ -53,8 +56,7 @@ export default function Seo(props) {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
+    </head>
   );
 }
 
