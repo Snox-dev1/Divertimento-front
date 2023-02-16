@@ -7,7 +7,7 @@ const Card = ({
   className,
 }) => {
   return (
-    <div className={` relative ${className} shadow-md shadow-slate-800`}>
+    <div className={` relative ${className} shadow-md shadow-slate-700 rounded-lg`}>
       <div className="bg-gradient-to-tr from-yellow-400 to-red-400 flex justify-center items-center h-full w-full p-1 rounded-lg relative">
         <img src={src} alt="" className=" h-full w-full object-cover rounded-lg " />
         <div className="bg-gradient-to-t from-black to-transparent absolute inset-0 rounded-lg m-1"></div>

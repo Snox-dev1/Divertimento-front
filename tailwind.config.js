@@ -10,7 +10,7 @@ module.exports = {
         sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
-        background: '#2d3436',
+        background: '#282B30',
         primary: '#ff0086',
         'primary-light': '#ff33a8',
         white: '#ecf0f1',

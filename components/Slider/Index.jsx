@@ -52,14 +52,14 @@ const Slider = () => {
   return (
     <div className="h-full w-full relative">
       <div className="absolute inset-0 left-10 top-10">
-        <h1 className="text-3xl font-semibold">Divertimento</h1>
-        <h2 className="text-lg">A chaque moment son déguisement</h2>
+        <img src="/Logo_blanc.png" className="sm:h-10 w-[60%] md:w-auto" alt="Logo" />
+        {/* <h1 className="text-lg">A chaque moment son déguisement</h1> */}
       </div>
-      <div className="flex  items-center justify-center w-full h-screen  px-24">
-        <div className="w-full h-full  flex flex-col gap-6 justify-center pt-12">
+      <div className="flex flex-col-reverse xl:flex-row xl:items-center items-start justify-center w-full h-screen  sm:px-24 px-6">
+        <div className="xl:w-full sm:w-[70%] w-full h-full  flex flex-col gap-6 xl:justify-center justify-start items-start xl:pt-12 pt-3">
           <Texte textes={SliderText[slider]} />
 
-          <div className="flex justify-start items-start mt-10 relative">
+          <div className="flex sm:justify-start sm:items-start w-full items-center justify-center md:mt-10 mt-2 relative">
             {SliderText.map((item, index) => (
               <div
                 key={item.id}
@@ -71,8 +71,12 @@ const Slider = () => {
             ))}
           </div>
         </div>
-        <div className="w-full h-full flex justify-center items-center">
-          <img src={SliderText[slider].image} alt="" className="w-[80%] object-cover p-12" />
+        <div className="w-full h-full flex xl:justify-center xl:items-center items-center sm:justify-end justify-center sm:mt-12 sm:-mb-32 mt-24 xl:-mb-0 xl:mt-0 ">
+          <img
+            src={SliderText[slider].image}
+            alt=""
+            className="xl:w-[80%] sm:w-[40%] min-[480px]:w-[80%] w-full object-cover p-0 xl:pt-12"
+          />
         </div>
       </div>
 
@@ -83,7 +87,7 @@ const Slider = () => {
             } transition-all duration-500 absolute inset-0 w-full h-full
                   `}
       >
-        <div className="top-10 right-10 absolute text-lg">
+        <div className="top-10 right-10 absolute text-lg hidden lg:block">
           Réserves au{' '}
           <span>
             <a href="tel:+33 6 95 95 95 95" className="text-white font-bold">
@@ -91,9 +95,10 @@ const Slider = () => {
             </a>
           </span>
         </div>
-        <div className="bottom-10 right-10 absolute text-2xl">
+        <div className="top-10 right-10 md:top-[95%] md:right-10  absolute text-2xl ">
           <Link href="/Index">
-            <div className="text-white font-bold">Accédes directement à la boutique</div>
+            <div className="text-white font-bold xl:block hidden">Accédes directement à la boutique</div>
+            <div className="text-white font-bold block xl:hidden">Passer</div>
           </Link>
         </div>
       </div>

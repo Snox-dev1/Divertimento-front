@@ -3,9 +3,9 @@ import React from 'react';
 const Texte = ({ textes }) => {
   return (
     <>
-      <div className="flex flex-col gap-4  items-start justify-center ">
-        <div className="text-5xl font-semibold">{textes.title}</div>
-        <div className="text-8xl font-bold">{textes.title2}</div>
+      <div className="flex flex-col md:gap-4 gap-2  items-start justify-center ">
+        <div className="text-2xl md:text-5xl font-semibold">{textes.title}</div>
+        <div className="text-4xl md:text-8xl font-bold">{textes.title2}</div>
         <div className="text-xl">{textes.description}</div>
       </div>
     </>
