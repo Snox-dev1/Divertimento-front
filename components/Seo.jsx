@@ -53,7 +53,9 @@ export default function Seo(props) {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="apple-mobile-web-app-title" content="Divertimento" />
+      <meta name="application-name" content="Divertimento" />
+      <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
     </head>

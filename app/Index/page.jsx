@@ -1,7 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { ApiRequest } from '../../api/ApiRequest';
+import BiGift from '../../components/Icons/BiGift';
+import IcOutlineDiscount from '../../components/Icons/IcOutlineDiscount';
+import MdiCardsHeartOutline from '../../components/Icons/MdiCardsHeartOutline';
+import PhMedal from '../../components/Icons/PhMedal';
 import Card from '../../components/UI/Card';
+import Product from '../../components/UI/Product';
 
 export default function IndexPage() {
   const [selected, setSelected] = useState('location');
@@ -9,11 +14,11 @@ export default function IndexPage() {
   const [topCategories, setTopCategories] = useState([]);
 
   useEffect(() => {
-    ApiRequest.get('categories/').then((res) => {
-      console.log(res.data);
-      setTopCategories(res.data.topCategories);
-      setCategories(res.data.categories);
-    });
+    // ApiRequest.get('categories/').then((res) => {
+    //   console.log(res.data);
+    //   setTopCategories(res.data.topCategories);
+    //   setCategories(res.data.categories);
+    // });
   }, []);
 
   return (
@@ -22,22 +27,28 @@ export default function IndexPage() {
         <img src="/Logo_blanc.png" className="sm:h-10 w-[60%] md:w-auto" alt="Logo" />
         <p className=" text-lg font-light mt-3">Costumier de vos évenements</p>
         <div className="md:container pb-2 border-b border-slate-600">
-          <div className="p-6 bg-gradient-to-t from-[#e37686] to-[#e2a5af] rounded-lg shadow shadow-slate-800 mt-3 mb-3 md:w-128 w-full">
-            <div className="flex items-center justify-between mt-6">
-              <div className="flex flex-col">
-                <h1 className="text-3xl font-bold">Illimités</h1>
-                <p className="text-sm font-light">Abonnement Ninho</p>
+          <div className="flex gap-6">
+            <div className="p-6 bg-gradient-to-t from-[#e37686] to-[#e2a5af] rounded-lg shadow shadow-slate-800 mt-3 mb-3 md:w-128 w-full">
+              <div className="flex items-center justify-between mt-6">
+                <div className="flex flex-col">
+                  <h1 className="text-3xl font-bold">Illimités</h1>
+                  <p className="text-sm font-light">Abonnement Ninho</p>
+                </div>
+                <div>
+                  <p className="text-6xl font-bold">9€</p>
+                </div>
               </div>
               <div>
-                <p className="text-6xl font-bold">9€</p>
+                <p className=" text-xs mt-6 w-[80%]">
+                  Par mois et sans engagements <br />
+                  changer le costume de votre enfants quand bon vous semble
+                </p>
               </div>
             </div>
-            <div>
-              <p className=" text-xs mt-6 w-[80%]">
-                Par mois et sans engagements <br />
-                changer le costume de votre enfants quand bon vous semble
-              </p>
-            </div>
+            {/* <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-t from-[#ff1a13] to-[#e7302b] rounded-lg shadow shadow-slate-800 mt-3 mb-3 md:w-128 w-full text-3xl font-bold">
+              <div className="flex items-center justify-between mt-6">01j:02h:03m:04s</div>
+              <div className="flex items-center justify-between mt-6">Avant Noël !</div>
+            </div> */}
           </div>
 
           <div className="mt-4 flex gap-2 text-lg ">
@@ -56,7 +67,35 @@ export default function IndexPage() {
           </div>
         </div>
       </header>
-
+      {/* <nav>
+        <div className="flex gap-6 justify-center items-center">
+          <div className="flex flex-col justify-center items-center w-28 text-sm">
+            <div className="p-4 rounded-lg bg-red-500 bg-opacity-50 border-2 border-red-500 mb-1 flex justify-center items-center">
+              <BiGift className="h-6 w-6 fill-white" />
+            </div>
+            Offres
+          </div>
+          <div className="flex flex-col justify-center items-center w-28 text-sm">
+            <div className="p-4 rounded-lg bg-red-500 bg-opacity-50 border-2 border-red-500 mb-1 flex justify-center items-center">
+              <IcOutlineDiscount className="h-6 w-6 fill-white" />
+            </div>
+            Petits prix
+          </div>
+          <div className="flex flex-col justify-center items-center w-28 text-sm">
+            <div className="p-4 rounded-lg bg-red-500 bg-opacity-50 border-2 border-red-500 mb-1 flex justify-center items-center">
+              <PhMedal className="h-6 w-6 fill-white" />
+            </div>
+            Top ventes
+          </div>
+          <div className="flex flex-col justify-center items-center w-28 text-sm">
+            <div className="p-4 rounded-lg bg-red-500 bg-opacity-50 border-2 border-red-500 mb-1 flex justify-center items-center">
+              <MdiCardsHeartOutline className="h-6 w-6 fill-white" />
+            </div>
+            Coups de coeur
+          </div>
+        </div>
+      </nav>
+      <Product /> */}
       <div className="md:container ">
         <div className="flex lg:flex-row flex-col justify-center lg:items-start items-center gap-3  md:m-0 m-3 pb-2 border-b border-slate-600">
           <div className="m-3 flex xl:flex-row flex-col xl:justify-start lg:gap-3 gap-0 xl:w-[60%] lg:w-[80%] w-full xl:items-end justify-start sm:items-start">
